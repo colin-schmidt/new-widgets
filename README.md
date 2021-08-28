@@ -1,5 +1,5 @@
 # new-widgets
-added some small functionalities to previous react widgets project
+8/26/21 - added some small functionalities to previous react widgets project
 <p>
 <strong>Change log:</strong>
 
