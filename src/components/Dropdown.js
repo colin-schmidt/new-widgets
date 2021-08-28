@@ -1,21 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 
-/*
-Bubbling - when an event is triggered, it originates on the target of what you (clicked, hovered over, etc.)
-then it "bubbles up" to that element's parent and also calls any function thats on that parent
-it continues up to the most parent element in a similar way
-
-CAN cancel event bubbling, but that's bad practice bc it can easily break stuff
-
-Important note about event listeners:
-
-Event listeners that are added with .addEventListener actually trigger first
-THEN the rest of the callback functions trigger/bubble, starting with the "youngest" child
-
-
-*/
-
-const Dropdown = ({ label, options, selected, onSelectedChange }) => {
+const Dropdown = ({
+  label,
+  options,
+  selected,
+  onSelectedChange,
+  dropdownNotes,
+}) => {
   const [open, setOpen] = useState(false); //for displaying/not displaying the rest of dropdown
   const ref = useRef();
 
@@ -55,7 +46,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
     <div ref={ref} className="ui form">
       <div className="field">
         {/* below we display the label prop and pass in it's value instead of hard coding color or language */}
-        <label className="label">{label} </label> 
+        <h3 className="label">{label} </h3>
         <div
           //whenever we click dropdown, it sets state to the opposite of what state is currently
           onClick={() => {
@@ -70,6 +61,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
           </div>
         </div>
       </div>
+      {dropdownNotes}
     </div>
   );
 };

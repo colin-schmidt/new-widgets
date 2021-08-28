@@ -39,12 +39,12 @@ const Translate = () => {
       />
       <div className="ui form">
         <div className="field">
-          <label>Enter text to be translated:</label>
+          <h3>Enter text to be translated:</h3>
           <input value={text} onChange={(e) => setText(e.target.value)} />
         </div>
       </div>
       <hr />
-      <h3 className="ui header">Output:</h3>
+      <h3 className="ui header">Translated Text:</h3>
       <Convert text={text} language={language} />
     </div>
   );
