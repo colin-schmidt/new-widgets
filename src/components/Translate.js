@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import Convert from "./Convert";
+import "./Translate.css";
 
 const options = [
   {
@@ -30,7 +31,7 @@ const Translate = () => {
   const [text, setText] = useState("");
 
   return (
-    <div>
+    <div className="lang-search">
       <Dropdown
         label="Select a language:"
         selected={language}
@@ -39,7 +40,7 @@ const Translate = () => {
       />
       <div className="ui form">
         <div className="field">
-          <h3>Enter text to be translated:</h3>
+          <h3 className="translate-header">Enter text to be translated:</h3>
           <input value={text} onChange={(e) => setText(e.target.value)} />
         </div>
       </div>

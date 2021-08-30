@@ -56,7 +56,7 @@ const dropdownNotes = (
 export default () => {
   const [selected, setSelected] = useState(options[0]);
   return (
-    <div>
+    <div className="dropdown">
       <Header />
       <Route path="/">
         <Accordion items={items} />

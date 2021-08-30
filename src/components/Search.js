@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './Search.css';
 
 const Search = () => {
   const [term, setTerm] = useState("");
@@ -63,7 +64,7 @@ const Search = () => {
     <div>
       <div className="ui form">
         <div className="field">
-          <label>Enter Search Term</label>
+          <h3 >Enter Search Term:</h3>
           <input
             value={term}
             onChange={(e) => setTerm(e.target.value)}

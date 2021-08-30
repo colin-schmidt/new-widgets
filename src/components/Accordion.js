@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Accordion.css";
 
 const Accordion = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -12,7 +13,7 @@ const Accordion = ({ items }) => {
     const active = index === activeIndex ? "active" : "";
 
     return (
-      <React.Fragment key={item.title}>
+      <React.Fragment className="dropdown" key={item.title}>
         <div className={`title ${active}`} onClick={() => onTitleClick(index)}>
           <i className="dropdown icon"></i>
           {item.title}

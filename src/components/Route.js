@@ -11,7 +11,7 @@ const Route = ({ path, children }) => {
     return () => {
       window.removeEventListener("popstate", onLocationChange);
     };
-  }, []); // 2nd arg = empty array, means this fn will only run on initial render
+  }, []); // 2nd arg = empty array, will only run on initial render
   return currentPath === path ? children : null;
 };
 

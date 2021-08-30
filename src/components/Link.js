@@ -1,8 +1,10 @@
 import React from "react";
+import "./Link.css"
 
 const Link = ({ className, href, children }) => {
   const onClick = (event) => {
-    if (event.metaKey || event.ctrlKey) { // lets users control click/command click(macs)
+    if (event.metaKey || event.ctrlKey) {
+      // lets users control click/command click(macs)
       return;
     }
     event.preventDefault(); //this prevents entire page from reloading every time a header link is clicked
@@ -12,9 +14,11 @@ const Link = ({ className, href, children }) => {
     window.dispatchEvent(navEvent);
   };
   return (
-    <a onClick={onClick} className={className} href={href}>
-      {children}
-    </a>
+    <div className="nav">
+      <a onClick={onClick} className={className} href={href}>
+        {children}
+      </a>
+    </div>
   );
 };
 
